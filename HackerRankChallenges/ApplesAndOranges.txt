@@ -1,0 +1,32 @@
+
+public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+{
+
+    var appleList = new List<int>();
+    var orangeList = new List<int>();
+
+    foreach (var fruit in apples)
+    {
+        //here we take the apples thrown and add the distance. If it is greater
+        //than s and less than t we add it to our list
+        if (fruit + a >= s && fruit + a <= t)
+        {
+            appleList.Add(fruit);
+        }
+    }
+
+    foreach (var fruit in oranges)
+    {
+        //here we take the oranges thrown and add the distance. If it is greater
+        //than s and less than t we add it to our list
+        if (fruit + b >= s && fruit + b <= t)
+        {
+            orangeList.Add(fruit);
+        }
+    }
+
+    Console.WriteLine(appleList.Count);
+    Console.WriteLine(orangeList.Count);
+
+
+}
